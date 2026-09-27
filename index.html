@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myポケモン図鑑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mode-base"> <!-- 初期状態は「種族値モード」 -->
+    <header>
+        <h1>Myポケモン図鑑</h1>
+        <div class="controls-container">
+            <input type="text" id="searchInput" placeholder="ポケモン名・特性で検索">
+            
+            <div class="filters-row">
+                <select id="typeFilter">
+                    <option value="">すべてのタイプ</option>
+                </select>
+                <select id="formFilter">
+                    <option value="all">すべての姿</option>
+                    <option value="normal">一般ポケモン</option>
+                    <option value="mega">メガシンカ</option>
+                </select>
+            </div>
+            
+            <div class="filters-row">
+                <select id="sortFilter">
+                    <option value="number">図鑑番号順</option>
+                    <option value="total">合計種族値順</option>
+                    <option value="H">HP順</option>
+                    <option value="A">こうげき順</option>
+                    <option value="B">ぼうぎょ順</option>
+                    <option value="C">とくこう順</option>
+                    <option value="D">とくぼう順</option>
+                    <option value="S">すばやさ順</option>
+                </select>
+                <!-- ※ここにあった toggle-mode を丸ごと削除しました -->
+            </div>
+        </div>
+    </header>
+
+    <main id="results"></main>
+
+    <script src="app.js"></script>
+</body>
+</html>
